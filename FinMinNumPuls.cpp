@@ -20,11 +20,8 @@ private:
             {
                 i++;
             }
-<<<<<<< HEAD
             swap(arr[i],arr[j]);
-=======
             swap(arr[i], arr[j]);
->>>>>>> b54915168e4f62e091b5e68299dc3aa719ff414f
         }
         swap(arr[i], arr[l]);
         if (i > k)
@@ -35,15 +32,18 @@ private:
         {
             return quickSort(arr, k, i + 1, r);
         }
-<<<<<<< HEAD
+
     vector <int> res;
     res.assign(arr.begin(),arr.begin()+k);
     return res;
-=======
+
         vector<int> res;
         res.assign(arr.begin(), arr.begin() + k);
         return res;
->>>>>>> b54915168e4f62e091b5e68299dc3aa719ff414f
+
+        vector<int> res;
+        res.assign(arr.begin(), arr.begin() + k);
+        return res;
     }
 
 public:

@@ -21,7 +21,6 @@ private:
                 i++;
             }
             swap(arr[i],arr[j]);
-
         }
         swap(arr[i],arr[l]);
         if  (i > k)
@@ -35,7 +34,6 @@ private:
     vector <int> res;
     res.assign(arr.begin(),arr.begin()+k);
     return res;
-
     }
 public:
     vector <int> getListNumbers(vector<int> & arr,int k)

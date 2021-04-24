@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 //¼ÆÊıÅÅĞò
 void count()
 {
@@ -46,11 +45,9 @@ void count()
     
 }
 
-
 int main()
 {
     count();
-
     system("pause");
     return 0;
 }

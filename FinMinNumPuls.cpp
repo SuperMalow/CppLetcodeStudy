@@ -7,9 +7,9 @@ using namespace std;
 class Solution
 {
 private:
-    vector <int> quickSort(vector<int> &arr,int k,int l,int r)
+    vector<int> quickSort(vector<int> &arr, int k, int l, int r)
     {
-        int i = l,j = r;
+        int i = l, j = r;
         while (i < j)
         {
             while (i < j && arr[j] >= arr[l])
@@ -20,31 +20,60 @@ private:
             {
                 i++;
             }
+<<<<<<< HEAD
             swap(arr[i],arr[j]);
+=======
+            swap(arr[i], arr[j]);
+>>>>>>> b54915168e4f62e091b5e68299dc3aa719ff414f
         }
-        swap(arr[i],arr[l]);
-        if  (i > k)
+        swap(arr[i], arr[l]);
+        if (i > k)
         {
-            return quickSort(arr,k,l,i-1);
+            return quickSort(arr, k, l, i - 1);
         }
-        if  (i < k)
+        if (i < k)
         {
-            return quickSort(arr,k,i+1,r);
+            return quickSort(arr, k, i + 1, r);
         }
+<<<<<<< HEAD
     vector <int> res;
     res.assign(arr.begin(),arr.begin()+k);
     return res;
+=======
+        vector<int> res;
+        res.assign(arr.begin(), arr.begin() + k);
+        return res;
+>>>>>>> b54915168e4f62e091b5e68299dc3aa719ff414f
     }
+
 public:
-    vector <int> getListNumbers(vector<int> & arr,int k)
+    vector<int> getListNumbers(vector<int> &arr, int k)
     {
-        if (k >= arr.size()) return arr;
-        return quickSort(arr,k,0,arr.size()-1);
+        if (k >= arr.size())
+            return arr;
+        return quickSort(arr, k, 0, arr.size() - 1);
     }
 };
 
+void test()
+{
+    //测试函数
+    vector<int> arr = {5, 8, 2, 3, 1, 7, 6, 4};
+    Solution s1;
+    vector<int> arr1;
+    arr1 = s1.getListNumbers(arr, 2);
+    cout << "数组内最小的值为：" << endl;
+    for (int i = 0; i < 2; i++)
+    {
+        cout << arr1[i] << "  ";
+    }
+    cout << endl;
+}
+
 int main()
 {
+
+    test();
     system("pause");
     return 0;
 }
